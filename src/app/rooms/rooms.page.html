@@ -1,0 +1,34 @@
+<ion-content>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <div class="header-container" *ngIf="hotel_web_editor">
+        <ion-buttons slot="end">
+          <ion-menu-button menu="main-menu"></ion-menu-button>
+        </ion-buttons>
+        <div class="site-logo-img">
+          <img [src]="hotel_web_editor.homepage.logo">
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <div class="container">
+    <div class="room-header" *ngIf="hotel_web_editor">
+      <img [src]="hotel_web_editor.homepage.header">
+      <div>
+        <span>Start by exploring the details of your dream vacation in our rooms.</span>
+      </div>
+    </div>
+    <div class="rooms-suits">
+      <h2>Rooms & Suits</h2>
+      <div class="room" *ngFor="let hotel_room of hotel_room">
+        <img [src]="hotel_room.head_image">
+        <div class="room-description">
+          <h3>{{hotel_room.name}}</h3>
+          <ion-button mode="ios" [routerLink]="['room-details' ,hotel_room._id]">Explore &nbsp;<ion-icon name="arrow-forward-outline"></ion-icon></ion-button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-content>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <div class="header-container" *ngIf="hotel_web_editor">
+        <ion-buttons slot="end">
+          <ion-menu-button menu="main-menu"></ion-menu-button>
+        </ion-buttons>
+        <div class="site-logo-img">
+          <img [src]="hotel_web_editor.homepage.logo">
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <div class="contact-container" *ngIf="hotel_web_editor">
+      <div class="maps">
+        <iframe [src]='sanitizer.bypassSecurityTrustResourceUrl("https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6383.93230450171!2d30.638804!3d36.867229!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1156b96ae14d8108!2sThe%20Boutique&#39;s%20Hotel!5e0!3m2!1str!2sus!4v1638953599803!5m2!1str!2sus")' width="100%" height="300" style="border:0;" allowfullscreen=""
+          loading="lazy"></iframe>
+      </div>
+      <div class="contact">
+        <h2>Contact Us</h2>
+        <div class="divider"></div>
+        <div class="contact-options">
+          <ion-label class="options">
+            <ion-icon name="business-outline"></ion-icon>
+            <h2>Be Our Guest</h2>
+            <p>{{hotel_web_editor.contact.adress}}</p>
+            <ion-icon name="logo-whatsapp"></ion-icon>
+            <h2>Whatsapp</h2>
+            <p>{{hotel_web_editor.contact.phone_number}}</p>
+            <ion-icon name="call-outline"></ion-icon>
+            <h2>Call Us</h2>
+            <p>{{hotel_web_editor.contact.phone_number}}</p>
+            <ion-icon name="mail-open-outline"></ion-icon>
+            <h2>Write Us</h2>
+            <p>{{hotel_web_editor.contact.mail}}</p>
+          </ion-label>
+        </div>
+      </div>
+      <div class="contact-social-media">
+        <ion-label>
+          <a [href]="hotel_web_editor.contact.facebook_link">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a [href]="hotel_web_editor.contact.instagram_link">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </ion-label>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

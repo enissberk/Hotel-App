@@ -1,0 +1,33 @@
+<ion-content>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <div class="header-container" *ngIf="hotel_web_editor">
+        <ion-buttons slot="end">
+          <ion-menu-button menu="main-menu"></ion-menu-button>
+        </ion-buttons>
+        <div class="site-logo-img">
+          <img [src]="hotel_web_editor.homepage.logo">
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <div class="container">
+      <div class="room" *ngIf="hotel_room">
+        <div>
+          <img [src]="hotel_room.head_image">
+        </div>
+        <div class="room-description">
+          <h3>{{hotel_room.name}}</h3>
+          <div class="divider"></div>
+          <p>{{hotel_room.description}}</p>
+        </div>
+        <div class="room-features">
+          <h3>Features</h3>
+          <div class="divider"></div>
+          <span>jakuzi</span>
+        </div>
+      </div>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

@@ -1,0 +1,179 @@
+:host {
+  ion-header {
+    ion-toolbar {
+      padding: 20px;
+      .header-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .site-logo-img {
+          width: 100%;
+          height: 120px;
+          padding: 20px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .container {
+    width: 100%;
+    padding: 15px;
+    .slider {
+      width: 100%;
+      ion-slides {
+        ::ng-deep {
+          .swiper-pagination-bullet-active {
+            background-color: black;
+          }
+          .swiper-pagination-bullet {
+            background-color: black;
+          }
+        }
+        ion-slide {
+          padding-bottom: 30px;
+          div {
+            width: 100%;
+            height: 300px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+    .reservation {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      ion-item {
+        width: 100%;
+        margin-top: 10px;
+        ion-input {
+          --padding-start: 10px;
+          border-radius: 5px;
+          border: 1px solid #bdc5cc;
+        }
+      }
+      ion-label {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+    .rooms-and-suits {
+      h2 {
+        font-size: 1.5rem;
+        color: #595959;
+        text-align: center;
+        margin: 20px 70px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgb(0, 40, 84);
+      }
+      .room {
+        margin-bottom: 45px;
+        img {
+          width: 100%;
+          min-height: 200px;
+          max-height: 250px;
+        }
+        .room-description {
+          margin: -20px 50px 0 50px;
+          background-color: #f2f2f2;
+          padding: 15px;
+          text-align: center;
+          h3 {
+            color: #595959;
+            font-size: 1.3rem;
+          }
+          p {
+            padding: 0 15px 0 15px;
+            color: #6f6f6f;
+            font-size: 0.9rem;
+          }
+          ion-button {
+            padding: 1px;
+            border: 1px solid #575757;
+            --color: #6f6f6f;
+            --background: #f2f2f2;
+            --background-activated: #f3f3f3;
+            --border-radius: 0;
+            ion-icon {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .activity {
+      width: 100%;
+      margin-bottom: 15px;
+      h2 {
+        font-size: 1.5rem;
+        color: #595959;
+        text-align: center;
+        margin: 20px 70px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgb(0, 40, 84);
+      }
+      .activity-info {
+        ion-slides {
+          width: 100%;
+          ion-slide {
+            display: flex;
+            flex-direction: column;
+            .activity-img {
+              width: 80%;
+              height: 300px;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .activity-description {
+              padding: 0 0 15px 0;
+              text-align: center;
+              h3 {
+                color: #595959;
+                font-size: 1.3rem;
+              }
+              p {
+                padding: 0 15px 0 15px;
+                color: #6f6f6f;
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .about {
+      width: 100%;
+      h2 {
+        font-size: 1.5rem;
+        color: #595959;
+        text-align: center;
+        margin: 15px 70px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgb(0, 40, 84);
+      }
+      .about-description {
+        width: 100%;
+        padding: 0 15px 15px 15px;
+        text-align: center;
+        span {
+          padding: 0 15px 0 15px;
+          color: #6f6f6f;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<ion-content>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <div class="header-container" *ngIf="hotel_web_editor">
+        <ion-buttons slot="end">
+          <ion-menu-button menu="main-menu"></ion-menu-button>
+        </ion-buttons>
+        <div class="site-logo-img">
+          <img [src]="hotel_web_editor.homepage.logo">
+        </div>  
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <div class="container">
+    <div class="activity" *ngIf="hotel_activities">
+      <div>
+        <img [src]="hotel_activities.images[0]">
+      </div>
+      <div class="activity-description">
+        <h3>{{hotel_activities.name}}</h3>
+        <div class="divider"></div>
+        <p>{{hotel_activities.description}}</p>
+      </div>
+    </div>
+  </div>
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the
+      woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+</ion-content>
