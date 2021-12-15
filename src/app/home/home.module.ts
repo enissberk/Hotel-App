@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { FooterComponent } from '../footer/footer.component';
+import { ReservationComponent } from '../reservation/reservation.component';
 
 
 @NgModule({
@@ -15,6 +16,6 @@ import { FooterComponent } from '../footer/footer.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, FooterComponent]
+  declarations: [HomePage, FooterComponent, ReservationComponent]
 })
 export class HomePageModule {}

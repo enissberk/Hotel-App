@@ -46,27 +46,6 @@
         }
       }
     }
-    .reservation {
-      width: 100%;
-      text-align: center;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      ion-item {
-        width: 100%;
-        margin-top: 10px;
-        ion-input {
-          --padding-start: 10px;
-          border-radius: 5px;
-          border: 1px solid #bdc5cc;
-        }
-      }
-      ion-label {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
-    }
     .rooms-and-suits {
       h2 {
         font-size: 1.5rem;
@@ -111,7 +90,6 @@
         }
       }
     }
-
     .activity {
       width: 100%;
       margin-bottom: 15px;

@@ -35,7 +35,6 @@ export class HomePage {
   async getHotel_activities() {
     DataService.hotel_activities.getAll().then((res) => {
       this.hotel_activities = res;
-      console.log(this.hotel_activities);
     })
   }
 

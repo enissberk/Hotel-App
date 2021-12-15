@@ -11,6 +11,7 @@
       </div>
     </ion-toolbar>
   </ion-header>
+
   <div class="container">
     <div class="slider">
       <ion-slides pager="true" [options]="option">
@@ -22,36 +23,7 @@
       </ion-slides>
     </div>
 
-    <div class="reservation">
-      <ion-item lines="none">
-        <ion-input placeholder="Adult" type="number"></ion-input>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-input placeholder="Child" type="number"></ion-input>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-input placeholder="Date 2" type="date"></ion-input>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-input placeholder="Date" type="datetime-local"></ion-input>
-      </ion-item>
-      <!-- <ion-item lines="none">
-        <ion-icon name="calendar-outline"></ion-icon>
-        <ion-datetime placeholder="Birthday"></ion-datetime>
-      </ion-item> -->
-      <ion-item>
-        <ion-label>Room</ion-label>
-        <ion-select interface="popover" mode="md">
-          <ion-select-option value="standard">Standard Room</ion-select-option>
-          <ion-select-option value="double">Double Room</ion-select-option>
-          <ion-select-option value="family">Family Suits</ion-select-option>
-        </ion-select>
-      </ion-item>
-      <ion-label>
-        <ion-checkbox mode="md"></ion-checkbox>
-        <span>Test</span>
-      </ion-label>
-    </div>
+  <app-reservation></app-reservation>
 
     <div class="rooms-and-suits">
       <h2>Rooms & Suits</h2>
@@ -73,13 +45,13 @@
       <div class="activity-info">
         <ion-slides>
           <ion-slide *ngFor="let activities of hotel_activities" [routerLink]="['activity-details' ,activities._id]">
-              <div class="activity-img">
-                <img [src]="activities.images[0]">
-              </div>
-              <div class="activity-description">
-                <h3>{{activities.name}}</h3>
-                <p>{{activities.description}}</p>
-              </div>
+            <div class="activity-img">
+              <img [src]="activities.images[0]">
+            </div>
+            <div class="activity-description">
+              <h3>{{activities.name}}</h3>
+              <p>{{activities.description}}</p>
+            </div>
           </ion-slide>
         </ion-slides>
       </div>
