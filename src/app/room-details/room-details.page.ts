@@ -24,7 +24,8 @@ export class RoomDetailsPage implements OnInit {
   }
 
   async getHotel_room() {
-    this.hotel_room = await DataService.hotel_room.get(this.id)
+    this.hotel_room = await DataService.hotel_room.get(this.id,{queryParams:{relation: true}})
+    console.log(this.hotel_room);
   }
 
   async getHotel_web_editor() {

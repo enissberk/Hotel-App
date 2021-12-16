@@ -7,15 +7,22 @@
         </ion-buttons>
         <div class="site-logo-img">
           <img [src]="hotel_web_editor.homepage.logo">
-        </div>  
+        </div>
       </div>
     </ion-toolbar>
   </ion-header>
   <div class="container">
     <div class="activity" *ngIf="hotel_activities">
-      <div>
+      <div class="header-img">
         <img [src]="hotel_activities.images[0]">
       </div>
+      <ion-slides [options]="sliderOpts">
+        <ion-slide *ngFor="let gallery of galleries">
+          <div class="gallery">
+            <img src="https://i4.hurimg.com/i/hurriyet/75/750x422/60ac1a1a7af5073a20d0caad.jpg">
+          </div>
+        </ion-slide>
+      </ion-slides>
       <div class="activity-description">
         <h3>{{hotel_activities.name}}</h3>
         <div class="divider"></div>
@@ -23,4 +30,6 @@
       </div>
     </div>
   </div>
+
+  <app-footer></app-footer>
 </ion-content>

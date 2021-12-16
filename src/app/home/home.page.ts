@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonSlides } from '@ionic/angular';
 import * as DataService from '../services/bucket'
 
 @Component({
@@ -11,7 +12,14 @@ export class HomePage {
   hotel_room: DataService.Hotel_room[] = [];
   hotel_web_editor: DataService.Hotel_web_editor;
   hotel_activities: DataService.Hotel_activities[] = [];
+  @ViewChild('mySlider')  slides: IonSlides;
 
+  swipeNext(){
+    this.slides.slideNext();
+  }
+  swipePrev(){
+    this.slides.slidePrev();
+  }
   constructor() {
     DataService.initialize({ apikey: "fskk1akvi1elv0" })
   }
@@ -45,5 +53,10 @@ export class HomePage {
     speed: 500,
     autoplay: true,
   }
+
+  move(slides){
+    console.log(slides)
+    slides.slideTo(2)
+}
 }
 

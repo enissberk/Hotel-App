@@ -9,9 +9,15 @@ import * as DataService from '../services/bucket'
 })
 export class ActivityDetailsPage implements OnInit {
 
+  galleries = new Array(5);
   id: any;
   hotel_activities: DataService.Hotel_activities;
   hotel_web_editor: DataService.Hotel_web_editor;
+
+  sliderOpts = {
+    slidesPerView: 4.5,
+    spaceBetween: 7,
+  }
 
   constructor(private activatedRoute: ActivatedRoute) {
     DataService.initialize({ apikey: "fskk1akvi1elv0" })

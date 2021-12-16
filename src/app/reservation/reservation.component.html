@@ -1,42 +1,63 @@
-<div class="reservation">
-  <h2>Reservation</h2>
+<div [formGroup]="reservationForm">
+  <div class="reservation">
+    <h2>Reservation</h2>
     <ion-item lines="none">
-      <ion-input placeholder="Your Name" type="text" required="required"></ion-input>
+      <ion-input 
+      placeholder="Your Name" 
+      type="text"
+      required
+      formControlName="name"
+      ></ion-input>
     </ion-item>
     <ion-item lines="none">
-      <ion-input placeholder="Email" type="email" required="required"></ion-input>
+      <ion-input 
+      placeholder="Email" 
+      type="email" 
+      required="required"
+      formControlName="email"
+      ></ion-input>
     </ion-item>
     <ion-item lines="none">
-      <ion-input placeholder="Adult" type="number" required="required"></ion-input>
+      <ion-input 
+      placeholder="Phone" 
+      type="tel" 
+      required="required"
+      formControlName="phone"
+      ></ion-input>
     </ion-item>
     <ion-item lines="none">
-      <ion-input placeholder="Child" type="number" required="required"></ion-input>
+      <ion-input 
+      placeholder="Adult" 
+      type="number" 
+      required="required"
+      formControlName="adult"
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input 
+      placeholder="Child" 
+      type="number" 
+      required="required"
+      formControlName="child"
+      ></ion-input>
     </ion-item>
     <div class="date">
       <ion-item lines="none">
-        <ion-input type="date"></ion-input>
+        <ion-datetime placeholder="Check in" formControlName="check_in"></ion-datetime>
       </ion-item>
       <ion-item lines="none">
-        <ion-input type="date"></ion-input>
+        <ion-datetime placeholder="Check out" formControlName="check_out" [min]="this.reservationForm.value.check_in" [value]="this.reservationForm.value.check_in"></ion-datetime>
       </ion-item>
     </div>
     <ion-item lines="none">
       <ion-label>Rooms</ion-label>
-      <ion-select interface="popover" mode="ios">
-        <ion-select-option value="standard">Standard Room</ion-select-option>
-        <ion-select-option value="double">Double Room</ion-select-option>
-        <ion-select-option value="family">Family Suits</ion-select-option>
+      <ion-select formControlName="room" mode="ios">
+        <ion-select-option [value]="room" *ngFor="let room of hotel_room">{{room.name}}</ion-select-option>
       </ion-select>
     </ion-item>
-  <!-- <ion-label>
-    <ion-checkbox mode="md"></ion-checkbox>
-    <span>&nbsp;Standard</span>
-  </ion-label>
-  <ion-label>
-    <ion-checkbox mode="md"></ion-checkbox>
-    <span>&nbsp;Family</span>
-  </ion-label> -->
-  <section>
-    <ion-button expand="block">Make a Reservation</ion-button>
-  </section>
+        
+    <section>
+      <ion-button (click)="reservation()" expand="block">Make a Reservation</ion-button>
+    </section>
+  </div>
 </div>

@@ -93,6 +93,9 @@
     .activity {
       width: 100%;
       margin-bottom: 15px;
+      :last-child {
+        right: 0;
+      }
       h2 {
         font-size: 1.5rem;
         color: #595959;
@@ -102,6 +105,7 @@
         border-bottom: 1px solid rgb(0, 40, 84);
       }
       .activity-info {
+        position: relative;
         ion-slides {
           width: 100%;
           ion-slide {
@@ -123,14 +127,23 @@
                 font-size: 1.3rem;
               }
               p {
-                padding: 0 15px 0 15px;
+                padding: 0 15px;
                 color: #6f6f6f;
                 font-size: 0.9rem;
               }
             }
           }
         }
+        ion-button {
+          position: absolute;
+          z-index: 2;
+          top: 30%;
+          --background: gray;
+          --color: white;
+          --background-activated: rgb(97, 97, 97);
+        }
       }
+
     }
     .about {
       width: 100%;

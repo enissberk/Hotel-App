@@ -22,12 +22,26 @@
     .container {
         padding: 15px;
         .activity {
-            div {
+            .header-img {
                 width: 100%;
                 height: 300px;
                 img {
                     width: 100%;
                     height: 100%;
+                }
+            }
+            ion-slides{
+                padding: 0 5px;
+                ion-slide{
+                    .gallery {
+                        width: 100%;
+                        height: 80px;
+                        margin: 5px 0;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
                 }
             }
             .activity-description {
