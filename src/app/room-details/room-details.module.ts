@@ -8,6 +8,7 @@ import { RoomDetailsPageRoutingModule } from './room-details-routing.module';
 
 import { RoomDetailsPage } from './room-details.page';
 import { FooterComponent } from '../footer/footer.component';
+import { GalleryComponent } from '../gallery/gallery.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { FooterComponent } from '../footer/footer.component';
     IonicModule,
     RoomDetailsPageRoutingModule
   ],
-  declarations: [RoomDetailsPage, FooterComponent]
+  declarations: [RoomDetailsPage, FooterComponent, GalleryComponent]
 })
 export class RoomDetailsPageModule {}

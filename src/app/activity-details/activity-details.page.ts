@@ -15,7 +15,7 @@ export class ActivityDetailsPage implements OnInit {
   hotel_web_editor: DataService.Hotel_web_editor;
 
   sliderOpts = {
-    slidesPerView: 4.5,
+    slidesPerView: 4.3,
     spaceBetween: 7,
   }
 

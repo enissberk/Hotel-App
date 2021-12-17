@@ -8,6 +8,7 @@ import { ActivityDetailsPageRoutingModule } from './activity-details-routing.mod
 
 import { ActivityDetailsPage } from './activity-details.page';
 import { FooterComponent } from '../footer/footer.component';
+import { GalleryComponent } from '../gallery/gallery.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { FooterComponent } from '../footer/footer.component';
     IonicModule,
     ActivityDetailsPageRoutingModule
   ],
-  declarations: [ActivityDetailsPage, FooterComponent]
+  declarations: [ActivityDetailsPage, FooterComponent, GalleryComponent]
 })
 export class ActivityDetailsPageModule {}

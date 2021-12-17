@@ -13,9 +13,9 @@
   </ion-header>
   <div class="container" *ngIf="hotel_room">
     <div class="room">
-      <div>
-        <img [src]="hotel_room.head_image">
-      </div>
+      
+      <app-gallery [gallery]="hotel_room"></app-gallery>
+
       <div class="room-description">
         <h3>{{hotel_room.name}}</h3>
         <span>{{hotel_room.description}}</span>
@@ -23,7 +23,6 @@
       <div class="room-features">
         <h3>Features</h3>
         <div class="features">
-          <div class="divider"></div>
           <ion-card>
             <ul *ngFor="let properties of hotel_room.properties">
               <li>{{properties.name}}</li>

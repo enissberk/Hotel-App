@@ -13,16 +13,9 @@
   </ion-header>
   <div class="container">
     <div class="activity" *ngIf="hotel_activities">
-      <div class="header-img">
-        <img [src]="hotel_activities.images[0]">
-      </div>
-      <ion-slides [options]="sliderOpts">
-        <ion-slide *ngFor="let gallery of galleries">
-          <div class="gallery">
-            <img src="https://i4.hurimg.com/i/hurriyet/75/750x422/60ac1a1a7af5073a20d0caad.jpg">
-          </div>
-        </ion-slide>
-      </ion-slides>
+      
+      <app-gallery [gallery]="hotel_activities"></app-gallery>
+
       <div class="activity-description">
         <h3>{{hotel_activities.name}}</h3>
         <div class="divider"></div>
