@@ -9,7 +9,6 @@ import * as DataService from '../services/bucket'
 })
 export class ActivityDetailsPage implements OnInit {
 
-  galleries = new Array(5);
   id: any;
   hotel_activities: DataService.Hotel_activities;
   hotel_web_editor: DataService.Hotel_web_editor;

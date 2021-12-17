@@ -53,10 +53,5 @@ export class HomePage {
     speed: 500,
     autoplay: true,
   }
-
-  move(slides){
-    console.log(slides)
-    slides.slideTo(2)
-}
 }
 

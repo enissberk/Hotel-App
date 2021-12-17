@@ -11,10 +11,8 @@ export class GalleryComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.gallery);
     
   }
-
   sliderOpts = {
     slidesPerView: 4.3,
     spaceBetween: 7,
