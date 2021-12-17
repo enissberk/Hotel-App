@@ -1,10 +1,10 @@
 <div class="container">
   <div class="galleries" *ngIf="gallery">
     <div class="header-img">
-      <img [src]="gallery.images[0]">
+      <img [src]="headerImage">
     </div>
     <ion-slides [options]="sliderOpts">
-      <ion-slide *ngFor="let image of gallery.images">
+      <ion-slide *ngFor="let image of gallery.images" (click)="headerImage = image">
         <div class="gallery">
           <img [src]="image">
         </div>

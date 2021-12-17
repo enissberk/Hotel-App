@@ -7,14 +7,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
+  headerImage : string; 
   @Input() gallery;
-  constructor() { }
-
-  ngOnInit() {
-    
-  }
+  
   sliderOpts = {
     slidesPerView: 4.3,
     spaceBetween: 7,
+  }
+  constructor() { }
+
+  ngOnInit() {
+    this.headerImage=this.gallery.images[0];
   }
 }
